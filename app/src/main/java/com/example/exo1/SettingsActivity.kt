@@ -19,29 +19,17 @@ class SettingsActivity : AppCompatActivity() {
 
 
         super.onCreate(savedInstanceState)
-        val sp = getSharedPreferences("your_prefs", Activity.MODE_PRIVATE)
+        val sp = getSharedPreferences("my_prefs", Activity.MODE_PRIVATE)
         val editor = sp.edit()
         setContentView(R.layout.activity_settings)
-        mainLayout.setBackgroundColor(sp.getInt("your_int_key", -1))
+        window.decorView.setBackgroundColor(sp.getInt("background_color", -1))
         changeColorSettings.setOnClickListener() {
             val colorPicker = ColorPicker(this)
-            val colors: ArrayList<String> = ArrayList()
-            colors.add("#82B926")
-            colors.add("#a276eb")
-            colors.add("#6a3ab2")
-            colors.add("#666666")
-            colors.add("#FFFF00")
-            colors.add("#3C8D2F")
-            colors.add("#FA9F00")
-            colors.add("#FF0000")
+            colorPicker.show()
             colorPicker
-                .setDefaultColorButton(Color.parseColor("#f84c44"))
-                .setColors(colors)
-                .setColumns(5)
-                .setRoundColorButton(true)
                 .setOnChooseColorListener(object : OnChooseColorListener {
                     override fun onChooseColor(position: Int, color: Int) {
-                        editor.putInt("your_int_key",color)
+                        editor.putInt("background_color",color)
                         editor.commit()
                         val intent = intent // from getIntent()
                         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
@@ -51,7 +39,7 @@ class SettingsActivity : AppCompatActivity() {
 
                     override fun onCancel() {}
                 })
-                .show()
+
         }
         retour.setOnClickListener{
             val intent = Intent(this, MainActivity::class.java)

@@ -1,32 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/retour"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="40dp"
-            android:clickable="true"
-            app:srcCompat="@drawable/abc_vector_test"
-            tools:ignore="MissingConstraints" />
 
         <Button
             android:id="@+id/changeColorSettings"
-            android:layout_width="match_parent"
+            android:layout_width="253dp"
             android:layout_height="59dp"
             android:text="Pick Color"
-            tools:ignore="MissingConstraints" />
+            android:layout_margin="20dp"
 
-    </LinearLayout>
+            android:layout_centerHorizontal="true"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/retour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/changeColorSettings"
+        android:layout_marginTop="300dp"
+         android:layout_marginLeft="50dp"
+
+
+
+        android:clickable="true"
+        app:srcCompat="@drawable/abc_vector_test"
+        tools:ignore="MissingConstraints" />
+
+
+</RelativeLayout>

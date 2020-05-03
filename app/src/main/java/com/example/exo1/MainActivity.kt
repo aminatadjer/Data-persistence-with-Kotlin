@@ -12,9 +12,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val sp = getSharedPreferences("your_prefs", Activity.MODE_PRIVATE)
+        val sp = getSharedPreferences("my_prefs", Activity.MODE_PRIVATE)
         setContentView(R.layout.activity_main)
-        mainLayoutmain.setBackgroundColor(sp.getInt("your_int_key", -1))
+        window.decorView.setBackgroundColor(sp.getInt("background_color", -1))
         val button1 = findViewById<Button>(R.id.button1)
         val button2 = findViewById<Button>(R.id.button2)
         val button3 = findViewById<Button>(R.id.button3)

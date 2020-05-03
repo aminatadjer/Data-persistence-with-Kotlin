@@ -12,8 +12,8 @@ class Activity1 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        val sp = getSharedPreferences("your_prefs", Activity.MODE_PRIVATE)
+        val sp = getSharedPreferences("my_prefs", Activity.MODE_PRIVATE)
         setContentView(R.layout.activity1)
-        mainLayout1.setBackgroundColor(sp.getInt("your_int_key", -1))
+        window.decorView.setBackgroundColor(sp.getInt("background_color", -1))
     }
 }
