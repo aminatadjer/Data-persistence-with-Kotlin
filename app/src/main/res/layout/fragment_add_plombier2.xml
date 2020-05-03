@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AddPlombierFragment">
+
+    <EditText
+        android:id="@+id/NomPlumberEdit"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-18dp"
+        android:hint="Nom"
+        android:inputType="text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <EditText
+        android:layout_below="@id/NomPlumberEdit"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:hint="Prenom"
+        android:gravity="top"
+        android:id="@+id/PrenomPlumberEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        />
+    <EditText
+        android:layout_below="@id/PrenomPlumberEdit"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:hint="Annee d'experience"
+        android:gravity="top"
+        android:id="@+id/ExperPlumberEdit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inputType="textMultiLine"
+        />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button_save_plumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="176dp"
+        android:clickable="true"
+        android:src="@drawable/ic_save" />
+
+</RelativeLayout>
