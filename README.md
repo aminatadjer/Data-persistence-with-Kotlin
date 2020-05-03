@@ -1,13 +1,15 @@
 # Data-persistence-with-Kotlin
 
-exo1: Changing background colors for all activities using settings activity, and save it with shared preferences.
+**Branches**:
 
-exo2:/
+**exo1:** Changing background colors for all activities using settings activity, and save it with shared preferences.
 
-exo3:/
+**exercice2:** Plumbing interventions management using Json Files for storage.
 
-exo4:/
+**exercice3:** Plumbing interventions management using Room persistence and SQLite .
 
-exo5: Retrieving contacts from phone using content provider and send sms.
+**exercice4:** Notes management using Room persistence.
 
-exo6:/
+**exo5:** Retrieving contacts from phone using content provider and send sms.
+
+
